@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102191623) do
+ActiveRecord::Schema.define(version: 20140108115216) do
 
   create_table "categoria_equipos", force: true do |t|
     t.string   "nombre"
@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(version: 20140102191623) do
     t.string   "estado"
     t.float    "gis_latitud"
     t.float    "gis_longitud"
-    t.string   "mac_address"
+    t.string   "mac_addres"
     t.string   "numero_serie"
     t.string   "ip_address"
-    t.integer  "ip_port",             default: 80
+    t.integer  "ip_port"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "concentradors", ["categoria_equipo_id"], name: "categoria_equipo_id", using: :btree
+  add_index "concentradors", ["categoria_equipo_id"], name: "index_concentradors_on_categoria_equipo_id", using: :btree
 
   create_table "medidas", force: true do |t|
     t.integer  "sensor_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140102191623) do
     t.datetime "updated_at"
   end
 
-  add_index "medidas", ["sensor_id"], name: "sensor_id", using: :btree
+  add_index "medidas", ["sensor_id"], name: "index_medidas_on_sensor_id", using: :btree
 
   create_table "sensors", force: true do |t|
     t.integer  "concentrador_id"
@@ -59,6 +59,6 @@ ActiveRecord::Schema.define(version: 20140102191623) do
     t.datetime "updated_at"
   end
 
-  add_index "sensors", ["concentrador_id"], name: "concentrador_id", using: :btree
+  add_index "sensors", ["concentrador_id"], name: "index_sensors_on_concentrador_id", using: :btree
 
 end
