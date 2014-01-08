@@ -1,4 +1,10 @@
 Sensormanager::Application.routes.draw do
+  resources :medidas
+
+  resources :sensors
+
+  resources :concentradors
+
   resources :categoria_equipos
 
   # The priority is based upon order of creation: first created -> highest priority.
