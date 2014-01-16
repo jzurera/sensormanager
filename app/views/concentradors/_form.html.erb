@@ -1,0 +1,18 @@
+<%= semantic_form_for @concentrador do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :categoria_equipo, :collection => Sensor.all %>
+    <%= f.input :nombre, :label => "Author" %>
+    <%= f.input :descripcion %>
+    <%= f.input :estado, :as => :select, :collection => ["Justin", "Kate", "Amelia", "Gus", "Meg"] %>
+    <%= f.input :gis_latitud %>
+    <%= f.input :gis_longitud %>
+    <%= f.input :mac_addres %>
+    <%= f.input :numero_serie %>
+    <%= f.input :ip_address %>
+    <%= f.input :ip_port %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

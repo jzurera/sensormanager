@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140108115216) do
+ActiveRecord::Schema.define(version: 20140108172152) do
 
   create_table "categoria_equipos", force: true do |t|
     t.string   "nombre"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20140108115216) do
 
   create_table "medidas", force: true do |t|
     t.integer  "sensor_id"
-    t.datetime "fecha"
+    t.date     "fecha"
     t.float    "valor"
     t.datetime "created_at"
     t.datetime "updated_at"
