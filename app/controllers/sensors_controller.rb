@@ -19,6 +19,7 @@ class SensorsController < ApplicationController
 
   # GET /sensors/1/edit
   def edit
+
   end
 
   # POST /sensors

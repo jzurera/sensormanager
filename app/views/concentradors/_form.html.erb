@@ -1,6 +1,6 @@
 <%= semantic_form_for @concentrador do |f| %>
   <%= f.inputs do %>
-    <%= f.input :categoria_equipo, :collection => Sensor.all %>
+    <%= f.input :categoria_equipo, :collection => @sensor %>
     <%= f.input :nombre, :label => "Author" %>
     <%= f.input :descripcion %>
     <%= f.input :estado, :as => :select, :collection => ["Justin", "Kate", "Amelia", "Gus", "Meg"] %>

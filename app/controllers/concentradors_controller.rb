@@ -19,7 +19,7 @@ class ConcentradorsController < ApplicationController
 
   # GET /concentradors/1/edit
   def edit
-  end
+    end
 
   # POST /concentradors
   # POST /concentradors.json
