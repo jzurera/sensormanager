@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140108172152) do
+ActiveRecord::Schema.define(version: 20140118182901) do
 
   create_table "categoria_equipos", force: true do |t|
     t.string   "nombre"
@@ -60,5 +60,16 @@ ActiveRecord::Schema.define(version: 20140108172152) do
   end
 
   add_index "sensors", ["concentrador_id"], name: "index_sensors_on_concentrador_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "username",         null: false
+    t.string   "email",            null: false
+    t.string   "crypted_password", null: false
+    t.string   "salt",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end

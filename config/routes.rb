@@ -1,4 +1,6 @@
 Sensormanager::Application.routes.draw do
+  resources :users
+
   resources :medidas
 
   resources :sensors

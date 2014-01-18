@@ -47,4 +47,6 @@ end
 # Alvaro Paricio Added:
 # gem 'simple_form', '~> 3.0.0.rc'
 gem 'formtastic'
+# Javier Zurera Added:
+gem 'sorcery'
 #gem 'protected_attributes'
