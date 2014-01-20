@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140118182901) do
+ActiveRecord::Schema.define(version: 20140119114636) do
 
   create_table "categoria_equipos", force: true do |t|
     t.string   "nombre"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 20140118182901) do
 
   add_index "medidas", ["sensor_id"], name: "index_medidas_on_sensor_id", using: :btree
 
+  create_table "people", force: true do |t|
+    t.string   "name"
+    t.string   "salt"
+    t.string   "encrypted_password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sensors", force: true do |t|
     t.integer  "concentrador_id"
     t.string   "nombre"
@@ -61,11 +69,18 @@ ActiveRecord::Schema.define(version: 20140118182901) do
 
   add_index "sensors", ["concentrador_id"], name: "index_sensors_on_concentrador_id", using: :btree
 
+  create_table "sessions", force: true do |t|
+    t.integer  "person_id"
+    t.string   "ip_address"
+    t.string   "path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "username",         null: false
     t.string   "email",            null: false
     t.string   "crypted_password", null: false
-    t.string   "salt",             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

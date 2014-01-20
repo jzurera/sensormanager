@@ -1,7 +1,7 @@
 <%= semantic_form_for @concentrador do |f| %>
   <%= f.inputs do %>
     
-	<%= f.input :categoria_equipo_id, :as => :select, :collection => Hash[CategoriaEquipo.all.map{|d| [d.nombre]}]  %> 
+	<%= f.input :categoria_equipo, :as => :select, :collection => Hash[CategoriaEquipo.all.map{|d| [d.nombre, d.id]}]  %> 
     <%= f.input :nombre %>
     <%= f.input :descripcion %>
     <%= f.input :estado  %>

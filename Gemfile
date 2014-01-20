@@ -49,4 +49,5 @@ end
 gem 'formtastic'
 # Javier Zurera Added:
 gem 'sorcery'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 #gem 'protected_attributes'

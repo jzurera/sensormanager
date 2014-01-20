@@ -1,21 +1,23 @@
-Sensormanager::Application.routes.draw do
+Sensormanager::Application.routes.draw do 
+
+  
   resources :users
-
   resources :medidas
-
   resources :sensors
-
   resources :concentradors
-
   resources :categoria_equipos
+  
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'categoria_equipos#index'
-
+ root 'categoria_equipos#index' 
+  
+	
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -65,3 +67,6 @@ Sensormanager::Application.routes.draw do
   #     resources :products
   #   end
 end
+
+
+
